@@ -3,12 +3,12 @@ let noiseScale = 0.02;
 var star_pos = [];
 
 function setup() {
-    createCanvas(500, 500);
+    createCanvas(1280, 720);
     createButton("reroll").mousePressed(() => {
         seed++;
         noiseScale += 0.0006;
     });
-    for (var x = 0; x < 10; ++x) star_pos.push(random() * 500);
+    for (var x = 0; x < 10; ++x) star_pos.push(random() * 1280);
     //for(var x = 0; x <10; ++x)
 }
 var car = {
@@ -30,18 +30,16 @@ var lightColour = {
 function draw() {
     randomSeed(seed);
     background(0, 0, 139);
-    //console.log(random())
 
     fill(250, 250, 250);
     for (let x = 0; x < width; x++) {
-        let noiseVal = noise((x) * noiseScale, height / 2 * noiseScale);
-        //stroke(noiseVal*255);
+        let noiseVal = noise((mouseX + x) * noiseScale, height / 2 * noiseScale);
         rect(x, noiseVal * 800, x, height);
     }
 
     seed += 0.01;
 
-    //the clouds
+    //the stars
     noStroke();
     fill(255, 255, 0);
     ellipse(star_pos[0], 100, random() * cloudBound.w, random() * cloudBound.h);
