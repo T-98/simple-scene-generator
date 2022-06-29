@@ -1,4 +1,4 @@
-# p2-simple-scene-starter
+# Soothing Drive
 [Inspiring Image](https://drive.google.com/file/d/1RyLgc2gqcazxEYWZ8bfG-uf8N-V5qOjT/view?usp=sharing)
 
 #### 3 Different types of shapes:
